@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroCart - ECommerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ElectroCart</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for products...">
+        </div>
+        <div class="nav-links">
+            <a href="#">Cart (<span id="cart-count">0</span>)</a>
+            <a href="#" id="loginLink">Login</a>
+            <a href="#" id="registerLink">Register</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="products">
+            <!-- Products will be injected here via JavaScript -->
+        </section>
+
+        <!-- Registration Form -->
+        <div id="registerForm" class="form-container" style="display: none;">
+            <h2>Register</h2>
+            <input type="email" id="registerEmail" placeholder="Enter email" required>
+            <input type="password" id="registerPassword" placeholder="Enter password" required>
+            <button onclick="registerUser()">Register</button>
+            <button onclick="toggleForms('login')">Already have an account? Login</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="form-container" style="display: none;">
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Enter email" required>
+            <input type="password" id="loginPassword" placeholder="Enter password" required>
+            <button onclick="loginUser()">Login</button>
+            <button onclick="toggleForms('register')">Don't have an account? Register</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ElectroCart. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#" id="aboutUsLink">About Us</a>
+            <a href="#" id="contactUsLink">Contact Us</a>
+        </div>
+    </footer>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeContactModal">&times;</span>
+            <h2>Contact Information</h2>
+            <p>Email: support@electrocart.com</p>
+            <p>Phone: +91 8610077283</p>
+            <p>Address: Kothamangalam, Sivagangai</p>
+        </div>
+    </div>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAboutModal">&times;</span>
+            <h2>About Us</h2>
+            <p>We are ElectroCart, offering the best electronics at unbeatable prices.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
